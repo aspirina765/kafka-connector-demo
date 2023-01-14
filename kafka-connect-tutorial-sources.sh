@@ -7,7 +7,7 @@
 # Some docker images to updating
 #docker pull landoop/fast-data-dev:cp3.3.0 ;
 #docker pull landoop/fast-data-dev:cp4.0.0 ;
-docker pull landoop/fast-data-dev:latest ;
+#docker pull landoop/fast-data-dev:latest ;
 
 # Make sure you change the ADV_HOST variable in docker-compose.yml
 # if you are using docker Toolbox
