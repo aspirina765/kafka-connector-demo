@@ -25,11 +25,14 @@ docker-compose up kafka-cluster
 
 # We start a hosted tools, mapped on our code latest
 # Linux / Mac
-docker run --rm -it -v "$(pwd)":/tutorial --net=host landoop/fast-data-dev:latest bash
+docker run --rm -it -v "$(pwd)":/tutorial --net=host landoop/fast-data-dev:cp3.3.0 bash
+#docker run --rm -it -v "$(pwd)":/tutorial --net=host landoop/fast-data-dev:latest bash
 # Windows Command Line:
-docker run --rm -it -v %cd%:/tutorial --net=host landoop/fast-data-dev:latest bash
+docker run --rm -it -v %cd%:/tutorial --net=host landoop/fast-data-dev:cp3.3.0 bash
+#docker run --rm -it -v %cd%:/tutorial --net=host landoop/fast-data-dev:latest bash
 # Windows Powershell:
-docker run --rm -it -v ${PWD}:/tutorial --net=host landoop/fast-data-dev:latest bash
+docker run --rm -it -v ${PWD}:/tutorial --net=host landoop/fast-data-dev:cp3.3.0 bash
+#docker run --rm -it -v ${PWD}:/tutorial --net=host landoop/fast-data-dev:latest bash
 
 # we launch the kafka connector in standalone mode:
 cd /tutorial/source/demo-1
