@@ -4,7 +4,7 @@
 
 #/bin/bash cleanup.sh
 
-# cp4.0.0 , latest
+# Some docker images to updating
 #docker pull landoop/fast-data-dev:cp3.3.0 ;
 #docker pull landoop/fast-data-dev:cp4.0.0 ;
 docker pull landoop/fast-data-dev:latest ;
@@ -23,17 +23,16 @@ docker-compose up kafka-cluster
 # Look at the source/demo-1/file-stream-demo.properties file
 # Look at the demo-file.txt file
 
-# We start a hosted tools, mapped on our code
+# We start a hosted tools, mapped on our code latest
 # Linux / Mac
-docker run --rm -it -v "$(pwd)":/tutorial --net=host landoop/fast-data-dev:cp3.3.0 bash
+docker run --rm -it -v "$(pwd)":/tutorial --net=host landoop/fast-data-dev:latest bash
 # Windows Command Line:
-docker run --rm -it -v %cd%:/tutorial --net=host landoop/fast-data-dev:cp3.3.0 bash
+docker run --rm -it -v %cd%:/tutorial --net=host landoop/fast-data-dev:latest bash
 # Windows Powershell:
-docker run --rm -it -v ${PWD}:/tutorial --net=host landoop/fast-data-dev:cp3.3.0 bash
+docker run --rm -it -v ${PWD}:/tutorial --net=host landoop/fast-data-dev:latest bash
 
 # we launch the kafka connector in standalone mode:
-cd ./tutorial/source/demo-1
-#cd ./source/demo-1
+cd /tutorial/source/demo-1
 
 # create the topic we write to with 3 partitions
 kafka-topics --create --topic demo-1-standalone --partitions 3 --replication-factor 1 --bootstrap-server 127.0.0.1:9092
